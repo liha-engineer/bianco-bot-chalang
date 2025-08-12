@@ -6,9 +6,9 @@
     "dotenv": "^16.4.7",
     "youtube-ext": "^1.1.25"
   },
-  "name": "oreno-discord-bot",
+  "name": "bianco-bot-chalang",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "bot.js",
   "license": "MIT",
   "type": "module"
 }
