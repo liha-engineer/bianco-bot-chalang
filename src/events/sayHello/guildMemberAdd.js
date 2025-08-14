@@ -21,14 +21,18 @@ export const guildMemberAddHandler = (client) => {
 
     // 환영 메시지
     const welcomeChannel = member.guild.channels.cache.find(
-      (channel) => channel.name === '😎도란도란-잡담방'
+      (channel) => channel.name === '담소와-기록들'
     );
     const guideChannel = member.guild.channels.cache.find((channel) => channel.id === GUIDE_CHANNEL_ID)
     const announceChannel = member.guild.channels.cache.find((channel) => channel.id === ANNOUNCEMENT_CHANNEL_ID)
+    const historyChannel = member.guild.channels.cache.find((channel) => channel.id === HISTORY_CHANNEL_ID)
     if (welcomeChannel) {
       welcomeChannel.send(`🎉 어서와요 ${member}! 
-        ${announceChannel}에 게임 다운로드 링크, 
-        ${guideChannel}에 조작 가이드 있어요!`);
+        커피향 가득한 하루가 되길!`);
+    } else {
+      
+
+      console.error("환영인사를 보낼 채널이 없습니다. 채널 ID를 확인해 주세요.")
     }
   });
 };
